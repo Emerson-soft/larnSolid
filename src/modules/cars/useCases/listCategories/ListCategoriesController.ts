@@ -8,10 +8,6 @@ class ListCategoriesController {
     const all = this.listCategoriesUseCase.execute();
     return response.json(all);
   }
-
-  create() {
-    console.log("3");
-  }
 }
 
 export { ListCategoriesController };
