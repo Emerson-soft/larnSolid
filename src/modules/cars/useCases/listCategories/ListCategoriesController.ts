@@ -4,9 +4,13 @@ import { ListCategoriesUseCase } from "./ListCategoriesUseCase";
 
 class ListCategoriesController {
   constructor(private listCategoriesUseCase: ListCategoriesUseCase) {}
-  handle(request: Request, response: Response): Response {
-    const all = this.listCategoriesUseCase.execute();
-    return response.json(all);
+  async handle(request: Request, response: Response): Promise<Response> {
+    try {
+      const all = await this.listCategoriesUseCase.execute();
+      return response.json(all);
+    } catch (error) {
+      return response.status(400).json({ error: "user dont't find" });
+    }
   }
 }
 
