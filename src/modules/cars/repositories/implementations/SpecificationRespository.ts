@@ -19,6 +19,8 @@ class SpecificationRepository implements ISpecificationRepository {
       name,
     });
 
+    console.log("teste");
+
     await this.repository.save(specification);
   }
 
