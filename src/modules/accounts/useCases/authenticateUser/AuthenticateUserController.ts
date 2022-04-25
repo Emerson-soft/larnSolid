@@ -16,8 +16,6 @@ class AuthenticateUserController {
         password,
       });
 
-      console.log(token)
-
       return response.json(token);
     } catch (err) {
       return response.status(401).json(err);
