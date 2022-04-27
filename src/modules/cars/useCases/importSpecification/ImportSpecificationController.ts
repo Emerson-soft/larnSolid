@@ -5,18 +5,14 @@ import { ImportSpecificationUseCase } from "./ImportSpecificationUseCase";
 
 class ImportSpecificationController {
   async handle(request: Request, response: Response): Promise<Response> {
-    try {
-      const { file } = request;
+    const { file } = request;
 
-      const importSpecificationUseCase = container.resolve(
-        ImportSpecificationUseCase
-      );
+    const importSpecificationUseCase = container.resolve(
+      ImportSpecificationUseCase
+    );
 
-      await importSpecificationUseCase.execute(file);
-      return response.send();
-    } catch (err) {
-      return response.status(400).json(err);
-    }
+    await importSpecificationUseCase.execute(file);
+    return response.send();
   }
 }
 
