@@ -1,5 +1,5 @@
 import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
-import { User } from "../../entities/User";
+import { User } from "../../infra/typeorm/entities/User";
 import { IUsersRepository } from "../IUsersRepository";
 
 class UserRepositoryImMemory implements IUsersRepository {
@@ -22,7 +22,6 @@ class UserRepositoryImMemory implements IUsersRepository {
     this.users.push(user);
   }
   async findByEmail(email: string): Promise<User> {
-    console.log("caiu");
     return this.users.find((user) => user.email === email);
   }
   async findById(id: string): Promise<User> {

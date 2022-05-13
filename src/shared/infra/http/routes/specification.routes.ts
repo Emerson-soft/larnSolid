@@ -1,10 +1,10 @@
 import { Router } from "express";
 import multer from "multer";
 
+import { CreateSpecificationController } from "../../../../modules/cars/useCases/createSpeficication/CreateSpecificationController";
+import { ImportSpecificationController } from "../../../../modules/cars/useCases/importSpecification/ImportSpecificationController";
+import { ListSpecificationController } from "../../../../modules/cars/useCases/listSpecification/ListSpecificationController";
 import { ensureAutheticated } from "../middlewares/ensureAuthenticated";
-import { CreateSpecificationController } from "../modules/cars/useCases/createSpeficication/CreateSpecificationController";
-import { ImportSpecificationController } from "../modules/cars/useCases/importSpecification/ImportSpecificationController";
-import { ListSpecificationController } from "../modules/cars/useCases/listSpecification/ListSpecificationController";
 
 const specificationRoutes = Router();
 specificationRoutes.use(ensureAutheticated);
