@@ -2,7 +2,7 @@ import { parse } from "csv-parse";
 import fs from "fs";
 import { inject, injectable } from "tsyringe";
 
-import { SpecificationRepository } from "../../repositories/implementations/SpecificationRespository";
+import { SpecificationRepository } from "../../infra/typeorm/repositories/SpecificationRespository";
 
 interface IImportSpecification {
   name: string;
