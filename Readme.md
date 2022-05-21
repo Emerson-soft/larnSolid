@@ -50,9 +50,9 @@ o usuário responsável pelo cadastro deve ser um usuário adm
  # Aluguel de carro
 
  **RF**
-  deve ser possível cadastrar um aluguel 
+  deve ser possível cadastrar um aluguel          
 deve ser possível editar e deletar carros
  **RN**
  o Aluguel deve ter duração mínima de 24 hora
  Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário
- Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro
+ Não dev e ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro
