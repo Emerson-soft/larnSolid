@@ -18,7 +18,6 @@ describe("Create Specification", () => {
       description: "Teste",
     });
 
-    console.log(specification);
     expect(specification).toHaveProperty("id");
   });
 });

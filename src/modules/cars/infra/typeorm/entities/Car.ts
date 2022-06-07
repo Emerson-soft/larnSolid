@@ -40,7 +40,7 @@ class Car {
   brand: string;
 
   @ManyToOne(() => Category)
-  @JoinColumn({ name: "category_id" })
+  @JoinColumn([{ name: "category_id", referencedColumnName: "id" }])
   category: Category;
 
   @Column()
